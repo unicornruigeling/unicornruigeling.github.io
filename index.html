@@ -101,6 +101,77 @@
     
     
     <article
+  id="post-古典密码"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/07/30/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81/"
+    >古典密码</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/07/30/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81/" class="article-date">
+  <time datetime="2020-07-30T09:22:33.377Z" itemprop="datePublished">2020-07-30</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <ol>
+<li>摩斯电码</li>
+<li>栅栏密码</li>
+<li>凯撒密码</li>
+<li>维吉尼亚密码</li>
+<li>培根密码</li>
+<li>当铺密码</li>
+<li>猪圈密码<h4 id="摩斯电码"><a href="#摩斯电码" class="headerlink" title="摩斯电码"></a>摩斯电码</h4>摩尔斯电码也被称作摩斯密码，是一种时通时断的信号代码，通过不同的排列顺序来表达不同的英文字母、数字和标点符号。摩尔斯电码由两种基本信号组成：短促的点信号“·”，保持一定时间的长信号“—”。<br>标准摩尔斯电码对照表<br>.. .-.. — …- . -.– — ..-<br>解密网站解密之后是 ILOVEYOU<h4 id="栅栏密码"><a href="#栅栏密码" class="headerlink" title="栅栏密码"></a>栅栏密码</h4>把将要传递的信息中的字母交替排成上下两行。<br>再将下面一行字母排在上面一行的后边，从而形成一段密码</li>
+</ol>
+<h4 id="恺撒密码"><a href="#恺撒密码" class="headerlink" title="恺撒密码"></a>恺撒密码</h4><p>凯撒密码或称恺撒加密、恺撒变换、变换加密。<br>是用26个英文字母通过移位解密，最多可以移动25位。<br>凯撒密码的明文字母表向后或向前移动都是可以的，通常为向后移动，如果要向前移动1位，则等同于向后移动25位，位移选择为25即可。<br>加密公式：密文 = (明文 + 位移数) Mod 26<br>解密公式：明文 = (密文 - 位移数) Mod 26<br><img src="https://img-blog.csdnimg.cn/20200716142114211.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aWdlbGluZw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>密文是<br>MSW{byly_Cm_sIol_lYqUlx_yhdIs_Cn_Wuymul_il_wuff_bcg_pCwnIl_cm_u_Yrwyffyhn_guh_cz_sio_quhn_ni_ayn_bcm_chzilguncihm_sio_wuh_dich_om}<br>需要向后移动20位得到flag。SYC{here_Is_yOur_rEwArd_enjOy_It_Caesar_or_call_him_vIctOr_is_a_Excellent_man_if_you_want_to_get_his_informations_you_can_join_us}得到的flag是和题有关的。</p>
+<h4 id="维吉尼亚密码"><a href="#维吉尼亚密码" class="headerlink" title="维吉尼亚密码"></a>维吉尼亚密码</h4><p>维吉尼亚密码是使用一系列凯撒密码组成密码字母表的加密算法，属于多表密码的一种简单形式.<br>维吉尼亚密码简单解密网站<br><a href="https://www.qqxiuzi.cn/bianma/weijiniyamima.php" target="_blank" rel="noopener">https://www.qqxiuzi.cn/bianma/weijiniyamima.php</a></p>
+<h4 id="培根密码"><a href="#培根密码" class="headerlink" title="培根密码"></a>培根密码</h4><p>培根密码是由字母组成的。<br>培根密码的加密方式：</p>
+<pre><code>第一种方式：
+A aaaaa B aaaab C aaaba D aaabb E aabaa F aabab G aabba H aabbb I abaaa J abaab
+K ababa L ababb M abbaa N abbab O abbba P abbbb Q baaaa R baaab S baaba T baabb
+U babaa V babab W babba X babbb Y bbaaa Z bbaab
+
+第二种方式
+a AAAAA   g AABBA    n ABBAA   t BAABA
+b AAAAB   h AABBB    o ABBAB   u-v BAABB
+c AAABA   i-j ABAAA  p ABBBA   w BABAA
+d AAABB   k ABAAB    q ABBBB   x BABAB
+e AABAA   l ABABA    r BAAAA   y BABBA
+f AABAB   m ABABB    s BAAAB   z BABBB</code></pre><h4 id="当铺密码"><a href="#当铺密码" class="headerlink" title="当铺密码"></a>当铺密码</h4><p>当铺密码就是一种将中文和数字进行转化的密码，算法相当简单:当前汉字有多少笔画出头，就是转化成数字几.<br>例如：由=1 王=6  大=5。</p>
+<h4 id="猪圈密码"><a href="#猪圈密码" class="headerlink" title="猪圈密码"></a>猪圈密码</h4><p>猪圈密码共济会密码，是一种以格子为基础的简单替代式密码。<br><img src="https://img-blog.csdnimg.cn/20200717160746922.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aWdlbGluZw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
   id="post-布尔盲注"
   class="article article-type-post"
   itemscope
