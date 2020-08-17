@@ -9,7 +9,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    古典密码 |  Hexo
+    文件上传漏(1) |  Hexo
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -44,7 +44,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-古典密码"
+  id="post-文件上传漏(1)"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -55,22 +55,22 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  古典密码
+  文件上传漏(1)
 </h1>
  
 
     </header>
      
     <div class="article-meta">
-      <a href="/2020/07/30/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81/" class="article-date">
-  <time datetime="2020-07-30T09:22:33.377Z" itemprop="datePublished">2020-07-30</time>
+      <a href="/2020/08/17/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F(1)/" class="article-date">
+  <time datetime="2020-08-17T02:49:02.849Z" itemprop="datePublished">2020-08-17</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">626</span>
+            <span class="post-count">794</span>
         </span>
     </span>
 
@@ -94,31 +94,16 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <ol>
-<li>摩斯电码</li>
-<li>栅栏密码</li>
-<li>凯撒密码</li>
-<li>维吉尼亚密码</li>
-<li>培根密码</li>
-<li>当铺密码</li>
-<li>猪圈密码<h4 id="摩斯电码"><a href="#摩斯电码" class="headerlink" title="摩斯电码"></a>摩斯电码</h4>摩尔斯电码也被称作摩斯密码，是一种时通时断的信号代码，通过不同的排列顺序来表达不同的英文字母、数字和标点符号。摩尔斯电码由两种基本信号组成：短促的点信号“·”，保持一定时间的长信号“—”。<br>标准摩尔斯电码对照表<br>.. .-.. — …- . -.– — ..-<br>解密网站解密之后是 ILOVEYOU<h4 id="栅栏密码"><a href="#栅栏密码" class="headerlink" title="栅栏密码"></a>栅栏密码</h4>把将要传递的信息中的字母交替排成上下两行。<br>再将下面一行字母排在上面一行的后边，从而形成一段密码</li>
-</ol>
-<h4 id="恺撒密码"><a href="#恺撒密码" class="headerlink" title="恺撒密码"></a>恺撒密码</h4><p>凯撒密码或称恺撒加密、恺撒变换、变换加密。<br>是用26个英文字母通过移位解密，最多可以移动25位。<br>凯撒密码的明文字母表向后或向前移动都是可以的，通常为向后移动，如果要向前移动1位，则等同于向后移动25位，位移选择为25即可。<br>加密公式：密文 = (明文 + 位移数) Mod 26<br>解密公式：明文 = (密文 - 位移数) Mod 26<br><img src="https://img-blog.csdnimg.cn/20200716142114211.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aWdlbGluZw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>密文是<br>MSW{byly_Cm_sIol_lYqUlx_yhdIs_Cn_Wuymul_il_wuff_bcg_pCwnIl_cm_u_Yrwyffyhn_guh_cz_sio_quhn_ni_ayn_bcm_chzilguncihm_sio_wuh_dich_om}<br>需要向后移动20位得到flag。SYC{here_Is_yOur_rEwArd_enjOy_It_Caesar_or_call_him_vIctOr_is_a_Excellent_man_if_you_want_to_get_his_informations_you_can_join_us}得到的flag是和题有关的。</p>
-<h4 id="维吉尼亚密码"><a href="#维吉尼亚密码" class="headerlink" title="维吉尼亚密码"></a>维吉尼亚密码</h4><p>维吉尼亚密码是使用一系列凯撒密码组成密码字母表的加密算法，属于多表密码的一种简单形式.<br>维吉尼亚密码简单解密网站<br><a href="https://www.qqxiuzi.cn/bianma/weijiniyamima.php" target="_blank" rel="noopener">https://www.qqxiuzi.cn/bianma/weijiniyamima.php</a></p>
-<h4 id="培根密码"><a href="#培根密码" class="headerlink" title="培根密码"></a>培根密码</h4><p>培根密码是由字母组成的。<br>培根密码的加密方式：</p>
-<pre><code>第一种方式：
-A aaaaa B aaaab C aaaba D aaabb E aabaa F aabab G aabba H aabbb I abaaa J abaab
-K ababa L ababb M abbaa N abbab O abbba P abbbb Q baaaa R baaab S baaba T baabb
-U babaa V babab W babba X babbb Y bbaaa Z bbaab
-
-第二种方式
-a AAAAA   g AABBA    n ABBAA   t BAABA
-b AAAAB   h AABBB    o ABBAB   u-v BAABB
-c AAABA   i-j ABAAA  p ABBBA   w BABAA
-d AAABB   k ABAAB    q ABBBB   x BABAB
-e AABAA   l ABABA    r BAAAA   y BABBA
-f AABAB   m ABABB    s BAAAB   z BABBB</code></pre><h4 id="当铺密码"><a href="#当铺密码" class="headerlink" title="当铺密码"></a>当铺密码</h4><p>当铺密码就是一种将中文和数字进行转化的密码，算法相当简单:当前汉字有多少笔画出头，就是转化成数字几.<br>例如：由=1 王=6  大=5。</p>
-<h4 id="猪圈密码"><a href="#猪圈密码" class="headerlink" title="猪圈密码"></a>猪圈密码</h4><p>猪圈密码共济会密码，是一种以格子为基础的简单替代式密码。<br><img src="https://img-blog.csdnimg.cn/20200717160746922.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aWdlbGluZw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+  <h2 id="文件上传漏洞原理"><a href="#文件上传漏洞原理" class="headerlink" title="文件上传漏洞原理"></a>文件上传漏洞原理</h2><p>  程序员由于对上传的文件类型、内容没有进行严格限定，导致攻击者可以通过上传木马获取服务器的webshell权限（webshell:webshell就是以asp、php、jsp或者cgi等网页文件形式存在的一种代码执行环境，也可以将其称做为一种网页后门。黑客在入侵了一个网站后，通常会将asp或php后门文件与网站服务器WEB目录下正常的网页文件混在一起，然后就可以使用浏览器来访问asp或者php后门，得到一个命令执行环境，以达到控制网站服务器的目的。）<br>通俗的说：用户上传了一个可执行脚本文件并通过此文件获得了执行服务器端命令的能力。<br> <strong>文件上传漏洞的原因</strong><br>1.对文件的后缀名没有严格的限制<br>2.对于上传文件的MIMETYPE没有做检查<br>3.权限上没有对与上传的文件目录设置不可执行权限<br>4.web server对于 上传文件的行为没有做限制。</p>
+<h2 id="文件上传漏洞的危害"><a href="#文件上传漏洞的危害" class="headerlink" title="文件上传漏洞的危害"></a>文件上传漏洞的危害</h2><p>1.网站被控制,别人可以对文件进行增删改查等。<br>2.会导致服务器崩盘。</p>
+<h2 id="文件上传漏洞的靶机安装"><a href="#文件上传漏洞的靶机安装" class="headerlink" title="文件上传漏洞的靶机安装"></a><strong>文件上传漏洞的靶机安装</strong></h2><p> upload-labs安装<br> <a href="https://github.com/Tj1ngwe1/upload-labs" target="_blank" rel="noopener">下载地址</a><br> 可以用git直接下载也可以直接下载压缩包。<br> 把解压后的文件放在phpstudy的根目录下<br> <img src="https://img-blog.csdnimg.cn/20200814183016612.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aWdlbGluZw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200815163530623.png#pic_center" alt="在这里插入图片描述"></p>
+<p> 然后在浏览器中输入网站<br> <img src="https://img-blog.csdnimg.cn/20200814183126412.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aWdlbGluZw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>安装成功</p>
+<h2 id="JS（Javascript）前端绕过攻击"><a href="#JS（Javascript）前端绕过攻击" class="headerlink" title="JS（Javascript）前端绕过攻击"></a>JS（Javascript）前端绕过攻击</h2><p>js前端绕过攻击是在网页或其他平台上对文件的过滤仅使用了前端过滤而没有使用后端过滤。<br><strong>upload-labs第一关</strong><img src="https://img-blog.csdnimg.cn/20200815123243156.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aWdlbGluZw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>上传一张图片上传成功<img src="https://img-blog.csdnimg.cn/20200815123315576.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aWdlbGluZw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>然后上传一个php文件显示<img src="https://img-blog.csdnimg.cn/20200815123400198.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aWdlbGluZw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>所以只能上传后缀为jpg/png/gif的图片把php的文件后缀改为jpg。然后上传并且用burp suite抓包<img src="https://img-blog.csdnimg.cn/20200815162528211.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aWdlbGluZw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>把jpg后缀去掉然后点击forward上传。<img src="https://img-blog.csdnimg.cn/20200815162907825.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aWdlbGluZw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>然后你打开upload-labs文件夹中的upload有你上传的php代码。<img src="https://img-blog.csdnimg.cn/20200815163240919.png#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="MIME绕过"><a href="#MIME绕过" class="headerlink" title="MIME绕过"></a>MIME绕过</h2><p>MIME(Multipurpose Internet Mail Extensions)多用途互联网邮件扩展类型。是设定某种扩展名的文件用一种应用程序来打开的方式类型，当该扩展名文件被访问的时候，浏览器会自动使用指定应用程序来打开。多用于指定一些客户端自定义的文件名，以及一些媒体文件打开方式。<br><strong>常见的MIME类型</strong><br>超文本标记语言文本 .html,.html text/html<br>普通文本 .txt text/plain<br>RTF文本 .rtf application/rtf<br>GIF图形 .gif image/gif<br>JPEG图形 .jpeg,.jpg image/jpeg<br>au声音文件 .au audio/basic<br>MIDI音乐文件 mid,.midi audio/midi,audio/x-midi<br>TAR文件 .tar application/x-tar<br><strong>MIME绕过原理</strong><br>部分Web应用系统判定文件类型是通过content-type字段，黑客可以通过抓包，将content-type字段改为常见的图片类型从而绕过校验。<br><strong>upload-labs第二关</strong><br><img src="https://img-blog.csdnimg.cn/20200816104909132.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aWdlbGluZw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>用burpsuite抓包<img src="https://img-blog.csdnimg.cn/20200816105029693.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aWdlbGluZw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>改掉图中箭头的部分改为image/gif<img src="https://img-blog.csdnimg.cn/20200816105055806.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aWdlbGluZw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>上传成功在upload-labs中的upload文件夹中可以看到你上传的文件。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200816105134486.png#pic_center" alt="在这里插入图片描述"></p>
  
       <!-- reward -->
       
@@ -185,7 +170,7 @@ f AABAB   m ABABB    s BAAAB   z BABBB</code></pre><h4 id="当铺密码"><a href
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://unicornruigeling.github.io/2020/07/30/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://unicornruigeling.github.io/2020/08/17/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F(1)/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -196,19 +181,10 @@ f AABAB   m ABABB    s BAAAB   z BABBB</code></pre><h4 id="当铺密码"><a href
    
   <nav class="article-nav">
     
-      <a href="/2020/08/17/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F(1)/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            文件上传漏(1)
-          
-        </div>
-      </a>
     
-    
-      <a href="/2020/07/11/%E5%B8%83%E5%B0%94%E7%9B%B2%E6%B3%A8/" class="article-nav-link">
+      <a href="/2020/07/30/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">布尔盲注</div>
+        <div class="article-nav-title">古典密码</div>
       </a>
     
   </nav>

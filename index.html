@@ -101,6 +101,62 @@
     
     
     <article
+  id="post-文件上传漏(1)"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/08/17/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F(1)/"
+    >文件上传漏(1)</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/08/17/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F(1)/" class="article-date">
+  <time datetime="2020-08-17T02:49:02.849Z" itemprop="datePublished">2020-08-17</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="文件上传漏洞原理"><a href="#文件上传漏洞原理" class="headerlink" title="文件上传漏洞原理"></a>文件上传漏洞原理</h2><p>  程序员由于对上传的文件类型、内容没有进行严格限定，导致攻击者可以通过上传木马获取服务器的webshell权限（webshell:webshell就是以asp、php、jsp或者cgi等网页文件形式存在的一种代码执行环境，也可以将其称做为一种网页后门。黑客在入侵了一个网站后，通常会将asp或php后门文件与网站服务器WEB目录下正常的网页文件混在一起，然后就可以使用浏览器来访问asp或者php后门，得到一个命令执行环境，以达到控制网站服务器的目的。）<br>通俗的说：用户上传了一个可执行脚本文件并通过此文件获得了执行服务器端命令的能力。<br> <strong>文件上传漏洞的原因</strong><br>1.对文件的后缀名没有严格的限制<br>2.对于上传文件的MIMETYPE没有做检查<br>3.权限上没有对与上传的文件目录设置不可执行权限<br>4.web server对于 上传文件的行为没有做限制。</p>
+<h2 id="文件上传漏洞的危害"><a href="#文件上传漏洞的危害" class="headerlink" title="文件上传漏洞的危害"></a>文件上传漏洞的危害</h2><p>1.网站被控制,别人可以对文件进行增删改查等。<br>2.会导致服务器崩盘。</p>
+<h2 id="文件上传漏洞的靶机安装"><a href="#文件上传漏洞的靶机安装" class="headerlink" title="文件上传漏洞的靶机安装"></a><strong>文件上传漏洞的靶机安装</strong></h2><p> upload-labs安装<br> <a href="https://github.com/Tj1ngwe1/upload-labs" target="_blank" rel="noopener">下载地址</a><br> 可以用git直接下载也可以直接下载压缩包。<br> 把解压后的文件放在phpstudy的根目录下<br> <img src="https://img-blog.csdnimg.cn/20200814183016612.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aWdlbGluZw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200815163530623.png#pic_center" alt="在这里插入图片描述"></p>
+<p> 然后在浏览器中输入网站<br> <img src="https://img-blog.csdnimg.cn/20200814183126412.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aWdlbGluZw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>安装成功</p>
+<h2 id="JS（Javascript）前端绕过攻击"><a href="#JS（Javascript）前端绕过攻击" class="headerlink" title="JS（Javascript）前端绕过攻击"></a>JS（Javascript）前端绕过攻击</h2><p>js前端绕过攻击是在网页或其他平台上对文件的过滤仅使用了前端过滤而没有使用后端过滤。<br><strong>upload-labs第一关</strong><img src="https://img-blog.csdnimg.cn/20200815123243156.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aWdlbGluZw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>上传一张图片上传成功<img src="https://img-blog.csdnimg.cn/20200815123315576.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aWdlbGluZw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>然后上传一个php文件显示<img src="https://img-blog.csdnimg.cn/20200815123400198.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aWdlbGluZw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>所以只能上传后缀为jpg/png/gif的图片把php的文件后缀改为jpg。然后上传并且用burp suite抓包<img src="https://img-blog.csdnimg.cn/20200815162528211.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aWdlbGluZw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>把jpg后缀去掉然后点击forward上传。<img src="https://img-blog.csdnimg.cn/20200815162907825.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aWdlbGluZw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>然后你打开upload-labs文件夹中的upload有你上传的php代码。<img src="https://img-blog.csdnimg.cn/20200815163240919.png#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="MIME绕过"><a href="#MIME绕过" class="headerlink" title="MIME绕过"></a>MIME绕过</h2><p>MIME(Multipurpose Internet Mail Extensions)多用途互联网邮件扩展类型。是设定某种扩展名的文件用一种应用程序来打开的方式类型，当该扩展名文件被访问的时候，浏览器会自动使用指定应用程序来打开。多用于指定一些客户端自定义的文件名，以及一些媒体文件打开方式。<br><strong>常见的MIME类型</strong><br>超文本标记语言文本 .html,.html text/html<br>普通文本 .txt text/plain<br>RTF文本 .rtf application/rtf<br>GIF图形 .gif image/gif<br>JPEG图形 .jpeg,.jpg image/jpeg<br>au声音文件 .au audio/basic<br>MIDI音乐文件 mid,.midi audio/midi,audio/x-midi<br>TAR文件 .tar application/x-tar<br><strong>MIME绕过原理</strong><br>部分Web应用系统判定文件类型是通过content-type字段，黑客可以通过抓包，将content-type字段改为常见的图片类型从而绕过校验。<br><strong>upload-labs第二关</strong><br><img src="https://img-blog.csdnimg.cn/20200816104909132.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aWdlbGluZw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>用burpsuite抓包<img src="https://img-blog.csdnimg.cn/20200816105029693.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aWdlbGluZw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>改掉图中箭头的部分改为image/gif<img src="https://img-blog.csdnimg.cn/20200816105055806.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aWdlbGluZw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>上传成功在upload-labs中的upload文件夹中可以看到你上传的文件。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200816105134486.png#pic_center" alt="在这里插入图片描述"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
   id="post-古典密码"
   class="article article-type-post"
   itemscope
